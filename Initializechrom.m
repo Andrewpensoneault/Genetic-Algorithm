@@ -1,8 +1,8 @@
 lengthn=2;                   %number of parameters
 n=1;                         %number before decimal
-N=50;                        %number of runs
-maxperc=10;                  %number after decimal
-mutrate=2e-1;                %mutation rate
+N=20;                        %number of runs
+maxperc=20;                  %number after decimal
+mutrate=5e-1;                %mutation rate
 fitnessthreshold=.1;          %will stop if fitness below threshhold
 thresholdruns=5;             %will start new era if more than this many runs with no changes
 survival=round(.25*N);       %number of surviving parents
