@@ -1,7 +1,7 @@
 %Data generation
 clc
 clear all
-ranseed=2;
+ranseed=1;
 rand('seed',ranseed)
 params=[.125,.1];
 timespan=365;
