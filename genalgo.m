@@ -7,7 +7,7 @@ Initializechrom
 parameters=chromdecode(lengthn,N,maxperc,n,chromosomes);
 %Calculate Fitness - O(N) (approx .02*N seconds)
 for i=1:N
-    fitness(i) = costfunctionSIS(data,timespan,IC,parameters(:,i),pop);
+    fitness(i) = costfunctionSIS(data,length(data),IC,parameters(:,i),pop);
 end
 [fitnessmin,num]=min(fitness);
 lastimprove=fitnessmin;
@@ -44,4 +44,6 @@ while(fitnessmin>fitnessthreshold && noimprove<improvethresh)
     end
 end
 fprintf('The best results were values from beta of %1.8f and gamma of %1.8f \n', best(1),best(2))
-
+%%
+%%Plot the results
+Plotting
