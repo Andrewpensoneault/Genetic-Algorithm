@@ -1,5 +1,5 @@
 for i=1:N
-    fitness(i) = costfunctionSIS(data,timespan,IC,parameters(:,i),pop);   %finds fitness
+    fitness(i) = costfunctionSIS(data,length(data),IC,parameters(:,i),pop);   %finds fitness
 end
 %%
 %%Tests for below threshold
