@@ -1,12 +1,12 @@
 lengthn=2;                   %number of parameters
 n=1;                         %number before decimal
-N=20;                        %number of runs
+N=50;                        %number of runs
 maxperc=10;                  %number after decimal
 mutrate=5e-2;                %mutation rate
 fitnessthreshold=5;          %will stop if fitness below threshhold
 thresholdruns=50;            %will start new era if more than this many runs with no changes
-survival=round(.25*N);       %number of surviving parents
-improvethresh=1000;           %will end if no improvents in this time 
+survival=round(.2*N);        %number of surviving parents
+improvethresh=10000;           %will end if no improvents in this time 
 chromosomes=chromgen(lengthn,N,maxperc,n); %generates chromosomes
 count=1                      %counter for loops of G.A
 under=0;                     %number of times with no change

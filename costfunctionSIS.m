@@ -4,10 +4,11 @@ function val = costfunctionSIS(data,timespan,init_vec,theta,N)
 options = [];
 [~,y]=ode45(@SISModel,0:1:timespan,init_vec,[],theta,N); 
 
-w = y;
-
 % Cost Function model form
-val = sum((data-w).^2);
+if length(y)<length(data)
+    y(length(y):length(data))=0;
+end
+    val = sum((data-y).^2);
 
 
 function ydot=SISModel(t,y,a,N)
