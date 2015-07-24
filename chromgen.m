@@ -10,6 +10,6 @@ for i=1:N
         param = fix(rem(a*pow2(-(n-1):m),2));
         chromosome=[chromosome param];
     end
-    chromosomes(i).run=chromosome;
+    chromosomes(:,i)=chromosome;
     chromosome=[];
 end

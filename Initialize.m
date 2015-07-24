@@ -1,4 +1,6 @@
 %Data generation
+clc
+clear all
 params=[.125,.1];
 timespan=365;
 pop=1000;
