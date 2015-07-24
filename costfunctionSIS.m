@@ -8,7 +8,7 @@ options = [];
 if length(y)<length(data)
     y(length(y):length(data))=0;
 end
-    val = sum((data-y).^2);
+    val = sum((data-y).^2./y.^2);
 
 
 function ydot=SISModel(t,y,a,N)

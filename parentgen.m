@@ -1,7 +1,9 @@
-function parents = parentgen(fitness,chromosomes,N,survival)
+function parents = parentgen(fitness,chromosomes,N,survival,elite)
 %Generate Probability Distribution and Choose Parents
-list=1:N;
-for i=1:survival
+parentnum(1)=elite;
+list=(1:N);
+list=list(1:end ~=elite);
+for i=2:survival
     prob=(max(fitness(list))-fitness(list))/sum(max(fitness(list))-fitness(list)); %probabilities from list
     if any(isnan(prob(:)))==1
         prob=ones(length(list),1)/length(list);
